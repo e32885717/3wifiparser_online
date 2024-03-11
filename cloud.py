@@ -37,8 +37,12 @@ async def get_token():
 async def get_free_task():
     global session,token
     await set_session()
-    resp = await session.get(config.api_url + "getFreeTask")
-    return await resp.json()
+    try:
+      resp = await session.get(config.api_url + "getFreeTask")
+      return await resp.json()
+    except aiohttp.ClientConnectorError as e:
+      print(f"Connection attempt failed: {e} ")
+    return None 
     
 async def ping_task(task_id):
     global session,token
