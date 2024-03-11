@@ -36,7 +36,7 @@ async def get_task_from_server():
     logging.info("Receiving a task from the server...")
     out_task = utils.Task()
     task = await cloud.get_free_task()
-    if task is None
+    if task is None:
       await asyncio.sleep(15)
       return
     private = False
