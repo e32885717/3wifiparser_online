@@ -1,14 +1,15 @@
 import logging
 import config
 import aiohttp.typedefs
+from typing import Tuple 
 
 class Task:
     server_id: int
     local_id: int
-    min_maxTileX: list[int, int]
-    min_maxTileY: list[int, int]
+    min_maxTileX: Tuple[int, int]
+    min_maxTileY: Tuple[int, int]
     max_area: int
-    progress: list[int, int]
+    progress: Tuple[int, int]
     def get_tiles(self):
         x_len = self.min_maxTileX[1] - self.min_maxTileX[0] + 1
         y_len = self.min_maxTileY[1] - self.min_maxTileY[0] + 1
