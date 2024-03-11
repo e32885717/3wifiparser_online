@@ -9,7 +9,7 @@
 Загрузка с гитхаба
 
 ```bash
-  git clone https://github.com/3wifiparser/3wifiparser_online
+  git clone https://github.com/e32885717/3wifiparser_online
 ```
 
 Вход в директорию
